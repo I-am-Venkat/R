@@ -42,3 +42,27 @@ lines(t, type = "o", col = "blue")
 lines(m, type = "o", col = "green")
 
 
+#Box plot
+
+# Sample data
+# Sample data
+class_A <- c(55, 67, 72, 70, 68, 75, 80, 85)
+class_B <- c(60, 65, 70, 78, 82, 88, 90, 95)
+
+# Combine into a list for multiple boxes
+scores <- list("Class A" = class_A, "Class B" = class_B)
+
+# Create box plot
+boxplot(scores,
+        main = "Box Plot of Scores by Class",
+        ylab = "Scores",
+        col = c("lightblue", "lightgreen"),
+        border = "darkblue",
+        notch = TRUE)
+
+# Add mean points for each class
+points(1, mean(class_A), col="red", pch=19)
+points(2, mean(class_B), col="red", pch=19)
+
+
+
